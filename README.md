@@ -17,4 +17,7 @@ Use standard C++ (no external libraries).
 
 Example (g++):
 ```bash
-g++ -std=c++17 -O2 -o XyloTT9L XyloTT9L.cpp
+g++ -std=c++17 -O2 -o BetelTT9L BetelTT9L.cpp
+
+Program expects **5-line arguments** in this order:
+./BetelTT9L zShips.csv zCrew.csv rShips.csv rCrew.csv
