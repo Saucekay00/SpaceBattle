@@ -17,11 +17,13 @@ Use standard C++ (no external libraries).
 
 Example (g++):
 ```bash
-g++ -std=c++17 -O2 -o BetelTT9L BetelTT9L.cpp``` 
+g++ -std=c++17 -O2 -o BetelTT9L BetelTT9L.cpp
+``` 
 
 Program expects **5-line arguments** in this order:
 ```bash
-./BetelTT9L zShips.csv zCrew.csv rShips.csv rCrew.csv```
+./BetelTT9L zShips.csv zCrew.csv rShips.csv rCrew.csv
+``` 
 
 ## Crew Assignment Rules Implemented
 - A ship **cannot be deployed without at least 1 pilot**.
