@@ -7,6 +7,7 @@
 #include <sstream>
 #include <cstdlib>
 #include <ctime>
+#include <tuple>
 
 using namespace std;
 
@@ -647,9 +648,226 @@ private:
     }
 };
 
-// ============================================
-// CSV LOADING FUNCTIONS (TO BE IMPLEMENTED BY CSV TEAM MEMBER)
-// ============================================
+static inline std::string trim_copy(std::string s) {
+    auto notSpace = [](unsigned char ch) { return !std::isspace(ch); };
+    s.erase(s.begin(), std::find_if(s.begin(), s.end(), notSpace));
+    s.erase(std::find_if(s.rbegin(), s.rend(), notSpace).base(), s.end());
+    return s;
+}
+
+static inline std::string normalize_role(std::string s) {
+    s = trim_copy(s);
+
+    for (char &c : s) c = (char)std::tolower((unsigned char)c);
+
+    std::string out;
+    out.reserve(s.size());
+    bool prevSpace = false;
+    for (unsigned char ch : s) {
+        if (std::isspace(ch)) {
+            if (!prevSpace) out.push_back(' ');
+            prevSpace = true;
+        } else {
+            out.push_back((char)ch);
+            prevSpace = false;
+        }
+    }
+    return trim_copy(out);
+}
+
+static inline void trim_inplace(std::string &s) {
+    while (!s.empty() && (s.back()=='\r' || s.back()=='\n' || s.back()==' ' || s.back()=='\t'))
+        s.pop_back();
+    size_t i = 0;
+    while (i < s.size() && (s[i]==' ' || s[i]=='\t')) i++;
+    s.erase(0, i);
+}
+
+
+class CrewCoordinator
+{
+private:
+    vector<Person *> pilots;
+    vector<Person *> gunners;
+    vector<Person *> torpedoHandlers;
+
+    int pilotIndex;
+    int gunnerIndex;
+    int torpedoIndex;
+
+    void categorizeCrewByType(const vector<Person *> &crew)
+    {
+        for (int i = 0; i < crew.size(); i++)
+        {
+            Person *currentCrew = crew[i];
+            string role = currentCrew->getRole();
+
+            trim_inplace(role);
+
+            string roleLower = role;
+            transform(roleLower.begin(), roleLower.end(), roleLower.begin(), ::tolower);
+
+            if (roleLower == "pilot")
+            {
+                pilots.push_back(currentCrew);
+            }
+            else if (roleLower == "gunner")
+            {
+                gunners.push_back(currentCrew);
+            }
+            else if (roleLower == "torpedohandler")
+            {
+                torpedoHandlers.push_back(currentCrew);
+            }
+        }
+    }
+
+    void assignPrimaryPilots(vector<Ship *> &ships)
+    {
+        for (int i = 0; i < ships.size(); i++)
+        {
+            Ship *currentShip = ships[i];
+
+            if (pilotIndex < pilots.size())
+            {
+                Person *nextPilot = pilots[pilotIndex];
+                currentShip->addPilot(nextPilot);
+                pilotIndex++;
+            }
+        }
+    }
+
+    void assignSecondaryPilots(vector<Ship *> &ships)
+    {
+        for (int i = 0; i < ships.size(); i++)
+        {
+            Ship *currentShip = ships[i];
+            string shipType = currentShip->getShipType();
+
+            if (isLargeShip(shipType))
+            {
+                if (pilotIndex < pilots.size())
+                {
+                    Person *nextPilot = pilots[pilotIndex];
+                    currentShip->addPilot(nextPilot);
+                    pilotIndex++;
+                }
+            }
+        }
+    }
+
+    void distributeGunners(vector<Ship *> &ships)
+    {
+        while (gunnerIndex < gunners.size())
+        {
+            bool assignedAnyGunner = false;
+
+            for (int i = 0; i < ships.size(); i++)
+            {
+                if (gunnerIndex < gunners.size())
+                {
+                    Ship *currentShip = ships[i];
+                    Person *nextGunner = gunners[gunnerIndex];
+                    currentShip->addGunner(nextGunner);
+                    gunnerIndex++;
+                    assignedAnyGunner = true;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            if (!assignedAnyGunner)
+            {
+                break;
+            }
+        }
+    }
+
+    void distributeTorpedoHandlers(vector<Ship *> &ships)
+    {
+        while (torpedoIndex < torpedoHandlers.size())
+        {
+            bool assignedAnyTorpedo = false;
+
+            for (int i = 0; i < ships.size(); i++)
+            {
+                if (torpedoIndex < torpedoHandlers.size())
+                {
+                    Ship *currentShip = ships[i];
+                    string shipType = currentShip->getShipType();
+
+                    if (hasTorpedoCapability(shipType))
+                    {
+                        Person *nextTorpedoHandler = torpedoHandlers[torpedoIndex];
+                        currentShip->addTorpedoHandler(nextTorpedoHandler);
+                        torpedoIndex++;
+                        assignedAnyTorpedo = true;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            if (!assignedAnyTorpedo)
+            {
+                break;
+            }
+        }
+    }
+
+    bool isLargeShip(const string &shipType) const
+    {
+        return (shipType == "Corazzata" || shipType == "Fregatte");
+    }
+
+    bool hasTorpedoCapability(const string &shipType) const
+    {
+        return (shipType == "Corazzata" || shipType == "Fregatte");
+    }
+
+    void reset()
+    {
+        pilots.clear();
+        gunners.clear();
+        torpedoHandlers.clear();
+        pilotIndex = 0;
+        gunnerIndex = 0;
+        torpedoIndex = 0;
+    }
+
+public:
+    CrewCoordinator() : pilotIndex(0), gunnerIndex(0), torpedoIndex(0) {}
+
+    void assignCrewToShips(vector<Ship *> &ships, vector<Person *> &crew)
+    {
+        reset();
+        categorizeCrewByType(crew);
+        assignPrimaryPilots(ships);
+        assignSecondaryPilots(ships);
+        distributeGunners(ships);
+        distributeTorpedoHandlers(ships);
+    }
+
+    int getUnassignedPilotCount() const
+    {
+        return pilots.size() - pilotIndex;
+    }
+
+    int getUnassignedGunnerCount() const
+    {
+        return gunners.size() - gunnerIndex;
+    }
+
+    int getUnassignedTorpedoHandlerCount() const
+    {
+        return torpedoHandlers.size() - torpedoIndex;
+    }
+};
+
 
 vector<Ship *> loadShips(const string &filename, const string &faction)
 {
@@ -666,32 +884,34 @@ vector<Ship *> loadShips(const string &filename, const string &faction)
     while (getline(file, line))
     {
         stringstream ss(line);
-        string id, type, name;
+        string id, role, name, type;
 
         getline(ss, id, ',');
         getline(ss, type, ',');
         getline(ss, name, ',');
 
+        trim_inplace(id);
+        trim_inplace(type);
+        trim_inplace(name);
+
+        std::transform(type.begin(), type.end(), type.begin(),
+                    [](unsigned char c){ return std::tolower(c); });
+
         Ship *ship = nullptr;
 
         if (faction == "Zapezoid")
         {
-            if (type == "Guerriero")
-                ship = new Guerriero(id, name);
-            else if (type == "Medio")
-                ship = new Medio(id, name);
-            else if (type == "Corazzata")
-                ship = new Corazzata(id, name);
+            if (type == "guerriero")      ship = new Guerriero(id, name);
+            else if (type == "medio")     ship = new Medio(id, name);
+            else if (type == "corazzata") ship = new Corazzata(id, name);
         }
         else if (faction == "Rogoatuskan")
         {
-            if (type == "Jager")
-                ship = new Jager(id, name);
-            else if (type == "Kreuzer")
-                ship = new Kreuzer(id, name);
-            else if (type == "Fregatte")
-                ship = new Fregatte(id, name);
+            if (type == "jager")          ship = new Jager(id, name);
+            else if (type == "kreuzer")   ship = new Kreuzer(id, name);
+            else if (type == "fregatte")  ship = new Fregatte(id, name);
         }
+
 
         if (ship != nullptr)
         {
@@ -734,72 +954,12 @@ vector<Person *> loadCrew(const string &filename)
 
 void assignCrewToShips(vector<Ship *> &ships, vector<Person *> &crew)
 {
-    // Sort ships by HP (smallest first) to spread crew
-    sort(ships.begin(), ships.end(), [](Ship *a, Ship *b)
-         { return a->getMaxHitPoints() < b->getMaxHitPoints(); });
-
-    // First pass: assign at least one pilot to each ship
-    for (auto *ship : ships)
-    {
-        for (auto it = crew.begin(); it != crew.end(); ++it)
-        {
-            Person *person = *it;
-            if (person->getRole() == "pilot" || person->getRole() == "Pilot")
-            {
-                if (ship->addPilot(person))
-                {
-                    crew.erase(it);
-                    break;
-                }
-            }
-        }
-    }
-
-    // Second pass: distribute remaining crew
-    for (auto *ship : ships)
-    {
-        // Add remaining pilots
-        for (auto it = crew.begin(); it != crew.end();)
-        {
-            Person *person = *it;
-            bool assigned = false;
-
-            if (person->getRole() == "pilot" || person->getRole() == "Pilot")
-            {
-                if (ship->addPilot(person))
-                {
-                    it = crew.erase(it);
-                    assigned = true;
-                }
-            }
-            else if (person->getRole() == "gunner" || person->getRole() == "Gunner")
-            {
-                if (ship->addGunner(person))
-                {
-                    it = crew.erase(it);
-                    assigned = true;
-                }
-            }
-            else if (person->getRole() == "torpedo handler" || person->getRole() == "Torpedo Handler")
-            {
-                if (ship->addTorpedoHandler(person))
-                {
-                    it = crew.erase(it);
-                    assigned = true;
-                }
-            }
-
-            if (!assigned)
-            {
-                ++it;
-            }
-        }
-    }
+    CrewCoordinator coordinator;
+    coordinator.assignCrewToShips(ships, crew);
 }
 
-// ============================================
-// MAIN FUNCTION
-// ============================================
+
+
 
 int main(int argc, char *argv[])
 {
@@ -819,13 +979,38 @@ int main(int argc, char *argv[])
     cout << "Loaded " << rogoatuskanShips.size() << " Rogoatuskan ships and "
          << rogoatuskanCrew.size() << " crew members.\n";
 
+    cout << "Loaded " << zapezoidShips.size() << " Zapezoid ships and "
+        << zapezoidCrew.size() << " crew members.\n";
+    cout << "Loaded " << rogoatuskanShips.size() << " Rogoatuskan ships and "
+        << rogoatuskanCrew.size() << " crew members.\n";
+
+    cout << "DEBUG: Assigning Zapezoid crew...\n";
     assignCrewToShips(zapezoidShips, zapezoidCrew);
+    cout << "DEBUG: Zapezoid crew assigned successfully\n";
+
+    cout << "DEBUG: Assigning Rogoatuskan crew...\n";
     assignCrewToShips(rogoatuskanShips, rogoatuskanCrew);
+    cout << "DEBUG: Rogoatuskan crew assigned successfully\n";
+
+    cout << "\n--- DEBUG: SHIP STATUS ---\n";
+    cout << "ZAPEZOID FLEET:\n";
+    for (auto* ship : zapezoidShips) {
+        cout << ship->getName() << " (" << ship->getShipType() << ")" 
+            << " - Pilots: " << ship->getPilotCount() 
+            << " - Can Fly: " << (ship->canFly() ? "YES" : "NO") << "\n";
+    }
+    cout << "\nROGOATUSKAN FLEET:\n";
+    for (auto* ship : rogoatuskanShips) {
+        cout << ship->getName() << " (" << ship->getShipType() << ")" 
+            << " - Pilots: " << ship->getPilotCount() 
+            << " - Can Fly: " << (ship->canFly() ? "YES" : "NO") << "\n";
+    }
+    cout << "------------------------\n\n";
 
     BattleSimulator simulator(zapezoidShips, rogoatuskanShips);
     simulator.runBattle();
 
-    // Cleanup
+
     for (auto *ship : zapezoidShips)
     {
         delete ship;
