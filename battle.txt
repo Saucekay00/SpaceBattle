@@ -149,182 +149,125 @@ Loading data files...
 ========================================
 
 >>> ROUND 1 <<<
-   Corazzata Tacitus's Cannon crew Nova Torres fires at Kreuzer Galactica... HIT! (164 dmg)
-   Corazzata Tacitus's Cannon crew Parker Riker fires at Kreuzer Eridani... HIT! (164 dmg)
-   Corazzata Tacitus's Torpedo crew Korben Kasady fires at Kreuzer Orion... MISS.
-   Corazzata Tacitus's Torpedo crew Fox Calrissian fires at Kreuzer Galactica... MISS.
-   Corazzata Florian's Cannon crew Pym Adama fires at Kreuzer Galactica... HIT! (164 dmg)
-   Corazzata Florian's Cannon crew Riddick Barton fires at Jager Barnard... HIT! (164 dmg)
-   Corazzata Florian's Torpedo crew Cora Strange fires at Fregatte Sagittae... MISS.
-   Corazzata Florian's Torpedo crew Lambert Odinson fires at Kreuzer Europa... HIT! (293 dmg)
-   Corazzata Donnager's Cannon crew Cora Raccoon fires at Fregatte Sagittae... MISS.
-   Corazzata Donnager's Cannon crew Leia Janeway fires at Kreuzer Rocinante... MISS.
-   Corazzata Donnager's Torpedo crew Obi-Wan Drake fires at Jager Valerian... HIT! (293 dmg)
-   Corazzata Donnager's Torpedo crew Quorra Strange fires at Kreuzer Groombridge... HIT! (293 dmg)
-   Medio In Amber Clad's Cannon crew Kaylee Amidala fires at Kreuzer Orion... MISS.
-   Medio In Amber Clad's Cannon crew Gamora Riker fires at Fregatte Sagittae... MISS.
-   Medio Tau Ceti's Cannon crew Janet Lensherr fires at Kreuzer Eridani... MISS.
-   Medio Tau Ceti's Cannon crew Geordi Beck fires at Kreuzer Eridani... MISS.
-   Corazzata Hathaway's Cannon crew Yori O'Hara fires at Kreuzer Vitellius... MISS.
+   Corazzata Tacitus's Cannon crew Nova Torres fires at Kreuzer Orion... MISS.
+   Corazzata Tacitus's Cannon crew Parker Riker fires at Kreuzer Orion... HIT! (164 dmg)
+   Corazzata Tacitus's Torpedo crew Korben Kasady fires at Jager Valerian... MISS.
+   Corazzata Tacitus's Torpedo crew Fox Calrissian fires at Kreuzer Eridani... MISS.
+   Corazzata Florian's Cannon crew Pym Adama fires at Fregatte Sagittae... MISS.
+   Corazzata Florian's Cannon crew Riddick Barton fires at Kreuzer Galactica... MISS.
+   Corazzata Florian's Torpedo crew Cora Strange fires at Kreuzer Europa... HIT! (293 dmg)
+   Corazzata Florian's Torpedo crew Lambert Odinson fires at Fregatte Persei... MISS.
+   Corazzata Donnager's Cannon crew Cora Raccoon fires at Fregatte Persei... HIT! (164 dmg)
+   Corazzata Donnager's Cannon crew Leia Janeway fires at Kreuzer Eridani... HIT! (164 dmg)
+   Corazzata Donnager's Torpedo crew Obi-Wan Drake fires at Kreuzer Vitellius... MISS.
+   Corazzata Donnager's Torpedo crew Quorra Strange fires at Jager Barnard... HIT! (293 dmg)
+   Medio In Amber Clad's Cannon crew Kaylee Amidala fires at Kreuzer Rocinante... MISS.
+   Medio In Amber Clad's Cannon crew Gamora Riker fires at Kreuzer Galactica... HIT! (134 dmg)
+   Medio Tau Ceti's Cannon crew Janet Lensherr fires at Kreuzer Galactica... MISS.
+   Medio Tau Ceti's Cannon crew Geordi Beck fires at Kreuzer Galactica... MISS.
+   Corazzata Hathaway's Cannon crew Yori O'Hara fires at Kreuzer Orion... HIT! (164 dmg)
    Corazzata Hathaway's Cannon crew James Kim fires at Jager Normandy SR1... HIT! (164 dmg)
-   Corazzata Hathaway's Torpedo crew Switch Jameson fires at Fregatte Sagittae... MISS.
-   Corazzata Hathaway's Torpedo crew Tuvok Taylor fires at Fregatte Persei... HIT! (293 dmg)
-   Guerriero Aquarii's Cannon crew Riddick Osborn fires at Kreuzer Vitellius... MISS.
-   Medio Vesta's Cannon crew Thanos Tam fires at Kreuzer Rocinante... MISS.
-   Medio Vesta's Cannon crew Trinity Drake fires at Kreuzer Orion... MISS.
-   Medio Encke's Cannon crew Natasha Malak fires at Kreuzer Orion... MISS.
-   Medio Encke's Cannon crew Vasquez Beck fires at Fregatte Sagittae... MISS.
-   Medio Kapteyn's Cannon crew Dozer Octavius fires at Kreuzer Rocinante... MISS.
-   Medio Kapteyn's Cannon crew Cora Darkholme fires at Fregatte Persei... HIT! (134 dmg)
-   Corazzata Earth Force One's Cannon crew Dallas Frye fires at Fregatte Persei... HIT! (164 dmg)
-   Corazzata Earth Force One's Torpedo crew Obi-Wan Picard fires at Kreuzer Eridani... MISS.
-   Corazzata Camelopardalis's Cannon crew Thanos Kirk fires at Kreuzer Eridani... MISS.
-   Corazzata Camelopardalis's Torpedo crew Korben Wagner fires at Kreuzer Vitellius... MISS.
-   Fregatte Sagittae's Cannon crew Lambert Yoda fires at Medio Tau Ceti... MISS.
-   Fregatte Sagittae's Cannon crew Mantis Xavier fires at Corazzata Earth Force One... HIT! (159 dmg)
-   Fregatte Sagittae's Cannon crew Scott Connors fires at Corazzata Florian... HIT! (159 dmg)
-   Fregatte Sagittae's Cannon crew Ford Chekov fires at Corazzata Camelopardalis... HIT! (159 dmg)
-   Fregatte Sagittae's Torpedo crew Hoban Adama fires at Medio Vesta... MISS.
-   Fregatte Sagittae's Torpedo crew Flynn Destroyer fires at Corazzata Earth Force One... HIT! (282 dmg)
-   Fregatte Sagittae's Torpedo crew Rocket Summers fires at Corazzata Donnager... MISS.
-   Fregatte Sagittae's Torpedo crew Switch Tano fires at Corazzata Tacitus... MISS.
-   Fregatte Sagittae's Torpedo crew Steve Howlett fires at Corazzata Donnager... MISS.
-   Kreuzer Vitellius's Cannon crew Tron Danvers fires at Guerriero Aquarii... HIT! (132 dmg)
-   Kreuzer Vitellius's Cannon crew Leia Odinson fires at Corazzata Donnager... HIT! (132 dmg)
-   Fregatte Persei's Cannon crew Korben Serra fires at Medio Kapteyn... HIT! (159 dmg)
-   Fregatte Persei's Cannon crew Zoe Beeblebrox fires at Corazzata Hathaway... MISS.
-   Fregatte Persei's Cannon crew Lambert McCoy fires at Medio Kapteyn... HIT! (159 dmg)
-   Fregatte Persei's Torpedo crew Zoe Windu fires at Corazzata Tacitus... MISS.
-   Fregatte Persei's Torpedo crew Leeloo Romanoff fires at Corazzata Florian... HIT! (282 dmg)
-   Fregatte Persei's Torpedo crew Raven Rogers fires at Corazzata Camelopardalis... MISS.
-   Fregatte Persei's Torpedo crew Wong Kirk fires at Medio Tau Ceti... MISS.
-   Fregatte Persei's Torpedo crew Dozer Solo fires at Corazzata Tacitus... HIT! (282 dmg)
-   Kreuzer Orion's Cannon crew River Howlett fires at Corazzata Camelopardalis... MISS.
-   Kreuzer Orion's Cannon crew Wanda Picard fires at Corazzata Hathaway... MISS.
-   Jager Bebop's Cannon crew Leonard Djarin fires at Medio Encke... HIT! (101 dmg)
-   Kreuzer Rocinante's Cannon crew Leia Calrissian fires at Medio Vesta... MISS.
-   Kreuzer Rocinante's Cannon crew Tuvok Quill fires at Corazzata Camelopardalis... MISS.
-   Kreuzer Eridani's Cannon crew Trillian Fett fires at Medio In Amber Clad... MISS.
-   Kreuzer Eridani's Cannon crew River Amidala fires at Corazzata Earth Force One... MISS.
+   Corazzata Hathaway's Torpedo crew Switch Jameson fires at Kreuzer Galactica... MISS.
+   Corazzata Hathaway's Torpedo crew Tuvok Taylor fires at Kreuzer Rocinante... MISS.
+   Guerriero Aquarii's Cannon crew Riddick Osborn fires at Fregatte Persei... HIT! (96 dmg)
+   Medio Vesta's Cannon crew Thanos Tam fires at Jager Valerian... MISS.
+   Medio Vesta's Cannon crew Trinity Drake fires at Jager Valerian... HIT! (134 dmg)
+   Medio Encke's Cannon crew Natasha Malak fires at Jager Bebop... HIT! (134 dmg)
+   Medio Encke's Cannon crew Vasquez Beck fires at Fregatte Persei... MISS.
+   Medio Kapteyn's Cannon crew Dozer Octavius fires at Fregatte Sagittae... HIT! (134 dmg)
+   Medio Kapteyn's Cannon crew Cora Darkholme fires at Kreuzer Vitellius... MISS.
+   Corazzata Earth Force One's Cannon crew Dallas Frye fires at Kreuzer Galactica... HIT! (164 dmg)
+   Corazzata Earth Force One's Torpedo crew Obi-Wan Picard fires at Kreuzer Vitellius... HIT! (293 dmg)
+   Corazzata Camelopardalis's Cannon crew Thanos Kirk fires at Fregatte Sagittae... HIT! (164 dmg)
+   Corazzata Camelopardalis's Torpedo crew Korben Wagner fires at Kreuzer Rocinante... MISS.
+   Kreuzer Groombridge's Cannon crew Neo Mulder fires at Medio Vesta... HIT! (132 dmg)
+   Kreuzer Groombridge's Cannon crew Scott Revan fires at Corazzata Earth Force One... MISS.
+   Fregatte Sagittae's Cannon crew Lambert Yoda fires at Corazzata Donnager... HIT! (159 dmg)
+   Fregatte Sagittae's Cannon crew Mantis Xavier fires at Guerriero Aquarii... MISS.
+   Fregatte Sagittae's Cannon crew Scott Connors fires at Corazzata Hathaway... HIT! (159 dmg)
+   Fregatte Sagittae's Cannon crew Ford Chekov fires at Medio Kapteyn... MISS.
+   Fregatte Sagittae's Torpedo crew Hoban Adama fires at Medio Encke... HIT! (282 dmg)
+   Fregatte Sagittae's Torpedo crew Flynn Destroyer fires at Corazzata Donnager... MISS.
+   Fregatte Sagittae's Torpedo crew Rocket Summers fires at Medio In Amber Clad... HIT! (282 dmg)
+   Fregatte Sagittae's Torpedo crew Switch Tano fires at Guerriero Aquarii... HIT! (282 dmg)
+   Fregatte Sagittae's Torpedo crew Steve Howlett fires at Medio Tau Ceti... HIT! (282 dmg)
+   Fregatte Persei's Cannon crew Korben Serra fires at Corazzata Tacitus... HIT! (159 dmg)
+   Fregatte Persei's Cannon crew Zoe Beeblebrox fires at Corazzata Hathaway... HIT! (159 dmg)
+   Fregatte Persei's Cannon crew Lambert McCoy fires at Corazzata Camelopardalis... HIT! (159 dmg)
+   Fregatte Persei's Torpedo crew Zoe Windu fires at Corazzata Donnager... HIT! (282 dmg)
+   Fregatte Persei's Torpedo crew Leeloo Romanoff fires at Corazzata Florian... MISS.
+   Fregatte Persei's Torpedo crew Raven Rogers fires at Corazzata Donnager... MISS.
+   Fregatte Persei's Torpedo crew Wong Kirk fires at Corazzata Florian... HIT! (282 dmg)
+   Fregatte Persei's Torpedo crew Dozer Solo fires at Corazzata Hathaway... HIT! (282 dmg)
+   Kreuzer Rocinante's Cannon crew Leia Calrissian fires at Corazzata Tacitus... HIT! (132 dmg)
+   Kreuzer Rocinante's Cannon crew Tuvok Quill fires at Corazzata Hathaway... MISS.
+   Kreuzer Eridani's Cannon crew Trillian Fett fires at Corazzata Earth Force One... MISS.
+   Kreuzer Eridani's Cannon crew River Amidala fires at Corazzata Florian... HIT! (132 dmg)
 
 --- Round Status Report ---
 Zapezoids:
- [Z-S-001] Corazzata Tacitus (749/1031)
- [Z-S-002] Corazzata Florian (590/1031)
- [Z-S-003] Corazzata Donnager (899/1031)
- [Z-S-004] Medio In Amber Clad (214/214)
- [Z-S-005] Medio Tau Ceti (214/214)
- [Z-S-006] Corazzata Hathaway (1031/1031)
+ [Z-S-001] Corazzata Tacitus (740/1031)
+ [Z-S-002] Corazzata Florian (617/1031)
+ [Z-S-003] Corazzata Donnager (590/1031)
+ [Z-S-004] Medio In Amber Clad -- DESTROYED --
+ [Z-S-005] Medio Tau Ceti -- DESTROYED --
+ [Z-S-006] Corazzata Hathaway (431/1031)
  [Z-S-007] Guerriero Aquarii -- DESTROYED --
- [Z-S-008] Medio Vesta (214/214)
- [Z-S-009] Medio Encke (113/214)
- [Z-S-010] Medio Kapteyn -- DESTROYED --
- [Z-S-011] Corazzata Earth Force One (590/1031)
+ [Z-S-008] Medio Vesta (82/214)
+ [Z-S-009] Medio Encke -- DESTROYED --
+ [Z-S-010] Medio Kapteyn (214/214)
+ [Z-S-011] Corazzata Earth Force One (1031/1031)
  [Z-S-012] Corazzata Camelopardalis (872/1031)
 Rogoatuskans:
  [R-S-001] Jager Valerian -- DESTROYED --
  [R-S-002] Kreuzer Galactica -- DESTROYED --
- [R-S-003] Kreuzer Groombridge -- DESTROYED --
+ [R-S-003] Kreuzer Groombridge (212/212)
  [R-S-004] Jager Normandy SR1 -- DESTROYED --
  [R-S-005] Jager Barnard -- DESTROYED --
- [R-S-006] Fregatte Sagittae (1143/1143)
+ [R-S-006] Fregatte Sagittae (845/1143)
  [R-S-007] Kreuzer Europa -- DESTROYED --
- [R-S-008] Kreuzer Vitellius (212/212)
- [R-S-009] Fregatte Persei (552/1143)
- [R-S-010] Kreuzer Orion (212/212)
- [R-S-011] Jager Bebop (112/112)
+ [R-S-008] Kreuzer Vitellius -- DESTROYED --
+ [R-S-009] Fregatte Persei (883/1143)
+ [R-S-010] Kreuzer Orion -- DESTROYED --
+ [R-S-011] Jager Bebop -- DESTROYED --
  [R-S-012] Kreuzer Rocinante (212/212)
  [R-S-013] Kreuzer Eridani (48/212)
 
 >>> ROUND 2 <<<
-   Corazzata Tacitus's Cannon crew Nova Torres fires at Kreuzer Vitellius... MISS.
-   Corazzata Tacitus's Cannon crew Parker Riker fires at Kreuzer Vitellius... MISS.
-   Corazzata Tacitus's Torpedo crew Korben Kasady fires at Kreuzer Orion... MISS.
-   Corazzata Tacitus's Torpedo crew Fox Calrissian fires at Kreuzer Vitellius... MISS.
-   Corazzata Florian's Cannon crew Pym Adama fires at Fregatte Persei... HIT! (164 dmg)
-   Corazzata Florian's Cannon crew Riddick Barton fires at Fregatte Sagittae... MISS.
-   Corazzata Florian's Torpedo crew Cora Strange fires at Kreuzer Orion... MISS.
-   Corazzata Florian's Torpedo crew Lambert Odinson fires at Kreuzer Rocinante... HIT! (293 dmg)
-   Corazzata Donnager's Cannon crew Cora Raccoon fires at Fregatte Persei... HIT! (164 dmg)
-   Corazzata Donnager's Cannon crew Leia Janeway fires at Kreuzer Eridani... MISS.
-   Corazzata Donnager's Torpedo crew Obi-Wan Drake fires at Fregatte Sagittae... HIT! (293 dmg)
-   Corazzata Donnager's Torpedo crew Quorra Strange fires at Kreuzer Vitellius... HIT! (293 dmg)
-   Medio In Amber Clad's Cannon crew Kaylee Amidala fires at Kreuzer Orion... MISS.
-   Medio In Amber Clad's Cannon crew Gamora Riker fires at Kreuzer Eridani... HIT! (134 dmg)
-   Medio Tau Ceti's Cannon crew Janet Lensherr fires at Jager Bebop... MISS.
-   Medio Tau Ceti's Cannon crew Geordi Beck fires at Jager Bebop... HIT! (134 dmg)
-   Corazzata Hathaway's Cannon crew Yori O'Hara fires at Kreuzer Orion... HIT! (164 dmg)
-   Corazzata Hathaway's Cannon crew James Kim fires at Fregatte Sagittae... HIT! (164 dmg)
-   Corazzata Hathaway's Torpedo crew Switch Jameson fires at Fregatte Persei... HIT! (293 dmg)
-   Corazzata Hathaway's Torpedo crew Tuvok Taylor fires at Fregatte Sagittae... MISS.
-   Medio Vesta's Cannon crew Thanos Tam fires at Fregatte Sagittae... MISS.
-   Medio Vesta's Cannon crew Trinity Drake fires at Fregatte Sagittae... MISS.
-   Medio Encke's Cannon crew Natasha Malak fires at Fregatte Sagittae... MISS.
-   Medio Encke's Cannon crew Vasquez Beck fires at Fregatte Sagittae... HIT! (134 dmg)
-   Corazzata Earth Force One's Cannon crew Dallas Frye fires at Kreuzer Orion... HIT! (164 dmg)
-   Corazzata Earth Force One's Torpedo crew Obi-Wan Picard fires at Fregatte Sagittae... MISS.
-   Corazzata Camelopardalis's Cannon crew Thanos Kirk fires at Fregatte Sagittae... HIT! (164 dmg)
-   Corazzata Camelopardalis's Torpedo crew Korben Wagner fires at Fregatte Sagittae... HIT! (293 dmg)
-   Fregatte Sagittae's Cannon crew Lambert Yoda fires at Medio In Amber Clad... HIT! (159 dmg)
-   Fregatte Sagittae's Cannon crew Mantis Xavier fires at Corazzata Florian... HIT! (159 dmg)
-   Fregatte Sagittae's Cannon crew Scott Connors fires at Corazzata Florian... HIT! (159 dmg)
-   Fregatte Sagittae's Cannon crew Ford Chekov fires at Medio Vesta... HIT! (159 dmg)
-   Fregatte Sagittae's Torpedo crew Hoban Adama fires at Medio In Amber Clad... MISS.
-   Fregatte Sagittae's Torpedo crew Flynn Destroyer fires at Corazzata Florian... HIT! (282 dmg)
-   Fregatte Sagittae's Torpedo crew Rocket Summers fires at Medio In Amber Clad... MISS.
-   Fregatte Sagittae's Torpedo crew Switch Tano fires at Corazzata Hathaway... MISS.
-   Fregatte Sagittae's Torpedo crew Steve Howlett fires at Medio Encke... HIT! (282 dmg)
-
---- Round Status Report ---
-Zapezoids:
- [Z-S-001] Corazzata Tacitus (749/1031)
- [Z-S-002] Corazzata Florian -- DESTROYED --
- [Z-S-003] Corazzata Donnager (899/1031)
- [Z-S-004] Medio In Amber Clad (55/214)
- [Z-S-005] Medio Tau Ceti (214/214)
- [Z-S-006] Corazzata Hathaway (1031/1031)
- [Z-S-007] Guerriero Aquarii -- DESTROYED --
- [Z-S-008] Medio Vesta (55/214)
- [Z-S-009] Medio Encke -- DESTROYED --
- [Z-S-010] Medio Kapteyn -- DESTROYED --
- [Z-S-011] Corazzata Earth Force One (590/1031)
- [Z-S-012] Corazzata Camelopardalis (872/1031)
-Rogoatuskans:
- [R-S-001] Jager Valerian -- DESTROYED --
- [R-S-002] Kreuzer Galactica -- DESTROYED --
- [R-S-003] Kreuzer Groombridge -- DESTROYED --
- [R-S-004] Jager Normandy SR1 -- DESTROYED --
- [R-S-005] Jager Barnard -- DESTROYED --
- [R-S-006] Fregatte Sagittae (95/1143)
- [R-S-007] Kreuzer Europa -- DESTROYED --
- [R-S-008] Kreuzer Vitellius -- DESTROYED --
- [R-S-009] Fregatte Persei -- DESTROYED --
- [R-S-010] Kreuzer Orion -- DESTROYED --
- [R-S-011] Jager Bebop -- DESTROYED --
- [R-S-012] Kreuzer Rocinante -- DESTROYED --
- [R-S-013] Kreuzer Eridani -- DESTROYED --
-
->>> ROUND 3 <<<
-   Corazzata Tacitus's Cannon crew Nova Torres fires at Fregatte Sagittae... MISS.
-   Corazzata Tacitus's Cannon crew Parker Riker fires at Fregatte Sagittae... MISS.
-   Corazzata Tacitus's Torpedo crew Korben Kasady fires at Fregatte Sagittae... MISS.
-   Corazzata Tacitus's Torpedo crew Fox Calrissian fires at Fregatte Sagittae... MISS.
-   Corazzata Donnager's Cannon crew Cora Raccoon fires at Fregatte Sagittae... MISS.
+   Corazzata Tacitus's Cannon crew Nova Torres fires at Kreuzer Groombridge... HIT! (164 dmg)
+   Corazzata Tacitus's Cannon crew Parker Riker fires at Kreuzer Groombridge... HIT! (164 dmg)
+   Corazzata Tacitus's Torpedo crew Korben Kasady fires at Kreuzer Eridani... MISS.
+   Corazzata Tacitus's Torpedo crew Fox Calrissian fires at Kreuzer Rocinante... MISS.
+   Corazzata Florian's Cannon crew Pym Adama fires at Fregatte Sagittae... HIT! (164 dmg)
+   Corazzata Florian's Cannon crew Riddick Barton fires at Kreuzer Eridani... HIT! (164 dmg)
+   Corazzata Florian's Torpedo crew Cora Strange fires at Fregatte Sagittae... HIT! (293 dmg)
+   Corazzata Florian's Torpedo crew Lambert Odinson fires at Fregatte Sagittae... HIT! (293 dmg)
+   Corazzata Donnager's Cannon crew Cora Raccoon fires at Fregatte Persei... MISS.
    Corazzata Donnager's Cannon crew Leia Janeway fires at Fregatte Sagittae... HIT! (164 dmg)
+   Corazzata Donnager's Torpedo crew Obi-Wan Drake fires at Fregatte Persei... HIT! (293 dmg)
+   Corazzata Donnager's Torpedo crew Quorra Strange fires at Kreuzer Rocinante... HIT! (293 dmg)
+   Corazzata Hathaway's Cannon crew Yori O'Hara fires at Fregatte Persei... HIT! (164 dmg)
+   Corazzata Hathaway's Cannon crew James Kim fires at Fregatte Persei... HIT! (164 dmg)
+   Corazzata Hathaway's Torpedo crew Switch Jameson fires at Fregatte Persei... MISS.
+   Corazzata Hathaway's Torpedo crew Tuvok Taylor fires at Fregatte Persei... MISS.
+   Medio Vesta's Cannon crew Thanos Tam fires at Fregatte Persei... MISS.
+   Medio Vesta's Cannon crew Trinity Drake fires at Fregatte Persei... HIT! (134 dmg)
+   Medio Kapteyn's Cannon crew Dozer Octavius fires at Fregatte Persei... MISS.
+   Medio Kapteyn's Cannon crew Cora Darkholme fires at Fregatte Persei... HIT! (134 dmg)
 
 --- Round Status Report ---
 Zapezoids:
- [Z-S-001] Corazzata Tacitus (749/1031)
- [Z-S-002] Corazzata Florian -- DESTROYED --
- [Z-S-003] Corazzata Donnager (899/1031)
- [Z-S-004] Medio In Amber Clad (55/214)
- [Z-S-005] Medio Tau Ceti (214/214)
- [Z-S-006] Corazzata Hathaway (1031/1031)
+ [Z-S-001] Corazzata Tacitus (740/1031)
+ [Z-S-002] Corazzata Florian (617/1031)
+ [Z-S-003] Corazzata Donnager (590/1031)
+ [Z-S-004] Medio In Amber Clad -- DESTROYED --
+ [Z-S-005] Medio Tau Ceti -- DESTROYED --
+ [Z-S-006] Corazzata Hathaway (431/1031)
  [Z-S-007] Guerriero Aquarii -- DESTROYED --
- [Z-S-008] Medio Vesta (55/214)
+ [Z-S-008] Medio Vesta (82/214)
  [Z-S-009] Medio Encke -- DESTROYED --
- [Z-S-010] Medio Kapteyn -- DESTROYED --
- [Z-S-011] Corazzata Earth Force One (590/1031)
+ [Z-S-010] Medio Kapteyn (214/214)
+ [Z-S-011] Corazzata Earth Force One (1031/1031)
  [Z-S-012] Corazzata Camelopardalis (872/1031)
 Rogoatuskans:
  [R-S-001] Jager Valerian -- DESTROYED --
