@@ -74,7 +74,7 @@ public:
     const vector<Person*>& getTorpedoHandlers() const { return torpedoHandlers; }
 
     bool hasTorpedoes() const { return torpedoCount > 0 && maxTorpedoHandlers > 0; }
-
+    bool pilotsCanShootLightCannons = false;
     
 
     virtual ~Ship() {}
@@ -143,10 +143,14 @@ public:
 
     int getActiveLightCannons() const
     {
-        int gunnerCount = gunners.size();
-        if (gunnerCount < lightCannonCount)
-            return gunnerCount;
-        return lightCannonCount;
+        int operatorCount;
+        if (pilotsCanShootLightCannons)
+            operatorCount = pilots.size();
+        else
+            operatorCount = gunners.size();
+        if (operatorCount < lightCannonCount)
+            return operatorCount;
+        return min(lightCannonCount, operatorCount);
     }
 
     int getActiveTorpedos() const
@@ -221,6 +225,20 @@ public:
         return maxHitPoints;
     }
 
+    const Person* getLightCannonOperator(int i) const
+    {
+        if (pilotsCanShootLightCannons)
+        {
+            if (i >= 0 && (size_t)i < pilots.size()) return pilots[i];
+        }
+        else
+        {
+            if (i >= 0 && (size_t)i < gunners.size()) return gunners[i];
+        }
+        return nullptr;
+    }
+
+
     virtual double getLightHitChance() const = 0;
     virtual double getTorpedoHitChance() const = 0;
     virtual string getShipType() const = 0;
@@ -282,7 +300,8 @@ public:
     Guerriero(string id, string shipName) : Ship(id, shipName, 123)
     {
         maxPilots = 1;
-        maxGunners = 1;
+        maxGunners = 0;
+        pilotsCanShootLightCannons = true;
         lightCannonCount = 1;
         lightCannonPower = 96;
         maxTorpedoHandlers = 0;
@@ -389,7 +408,8 @@ public:
     Jager(string id, string shipName) : Ship(id, shipName, 112)
     {
         maxPilots = 1;
-        maxGunners = 1;
+        maxGunners = 0;
+        pilotsCanShootLightCannons = true;
         lightCannonCount = 1;
         lightCannonPower = 101;
         maxTorpedoHandlers = 0;
@@ -644,7 +664,9 @@ public:
                     Ship *tgt = selectRandomTarget(rogoatuskanFleet);
                     if (!tgt) break;
 
-                    string crewName = att->getGunners()[i]->getName();
+                    const Person* op = att->getLightCannonOperator(i);
+                    string crewName = op ? op->getName() : "Unknown";
+
                     bool hit = rollHit(att, true);
 
                     cout << "   " << att->getShipType() << " " << att->getName()
@@ -697,7 +719,9 @@ public:
                     Ship *tgt = selectRandomTarget(zapezoidFleet);
                     if (!tgt) break;
 
-                    string crewName = att->getGunners()[i]->getName();
+                    const Person* op = att->getLightCannonOperator(i);
+                    string crewName = op ? op->getName() : "Unknown";
+                    
                     bool hit = rollHit(att, true);
 
                     cout << "   " << att->getShipType() << " " << att->getName()
